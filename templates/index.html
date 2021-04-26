@@ -1,0 +1,33 @@
+<!DOCTYPE HTML>
+
+<html>
+	<head>
+		<title>Flask Template</title>
+    <style>
+      form {
+        margin: 0 auto;
+        max-width: 400px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+      }
+      input {
+        font-size: 28px;
+        margin-top: 20px;
+      }
+    </style>
+	</head>
+	<body>
+		<form action="/enqueue">
+			<input type="text" placeholder="Link" name="link"></input>
+      	<input type="text" placeholder="Nombre" name="nombre"></input>
+			<input type="submit" value="Agregar link (enqueue)"></input> 
+		</form>
+    <form action="/dequeue">
+        <input type="submit" value="Borrar link (dequeue)"></input>
+      </form>
+    <h4>Lista de links</h4>
+   <p> {{lista | safe}}</p>
+	</body>
+</html>
