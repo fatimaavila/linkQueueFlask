@@ -13,12 +13,14 @@
         align-items: center;
       }
       input {
-        font-size: 28px;
-        margin-top: 20px;
+        font-size: 12px;
+        margin-top: 12px;
       }
     </style>
 	</head>
+  <h1 style="text-align: center;">✨LinkQueue✨</h1>
 	<body>
+    <p style="text-align: justify;"> Para hacer tus proyectos más sencillos, LinkQueue te ofrece una manera de guardar tus links con un nombre personalizado para nunca perder todos los sitios donde has investigado.</p>
 		<form action="/enqueue">
 			<input type="text" placeholder="Link" name="link"></input>
       	<input type="text" placeholder="Nombre" name="nombre"></input>
@@ -27,7 +29,7 @@
     <form action="/dequeue">
         <input type="submit" value="Borrar link (dequeue)"></input>
       </form>
-    <h4>Lista de links</h4>
+    <h4 style="text-align: center;"><span style="background-color: #ffcc99;">Lista de links</span></h4>
    <p> {{lista | safe}}</p>
 	</body>
 </html>
