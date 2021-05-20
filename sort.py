@@ -1,23 +1,36 @@
 # Python program for implementation of Selection
 # Sort
-import sys
-A = ["o", "b", "h", "a", "0"]
+import __main__
 
-# Traverse through all array elements
-for i in range(len(A)):
-	
-	# Find the minimum element in remaining
-	# unsorted array
-	min_idx = i
-	for j in range(i+1, len(A)):
-		if ord(A[min_idx]) > ord(A[j]):
-			min_idx = j
-			
-	# Swap the found minimum element with
-	# the first element		
-	A[i], A[min_idx] = A[min_idx], A[i]
+def __repr__(self):
+    node = self.head
+    nodes = []
+    while node is not None:
+      nodes.append('<a href="'+node.data.split("|")[0]+'" target="_blank">'+node.data.split("|")[1]+node.data.split("|")[2]+'</a>')
+      __main__.sorteado.append(node.data)
+      node = node.next
+    nodes.append("")
+    return "<br>".join(nodes)
 
-# Driver code to test above
-print ("Sorted array")
-for i in range(len(A)):
-	print(A[i]),
+def selSort(A):
+  for i in range(len(A)):
+    
+    # Find the minimum element in remaining
+    # unsorted array
+    min_idx = i
+    for j in range(i+1, len(A)):
+      if ord(A[min_idx].split("|")[1]) > ord(A[j].split("|")[1]):
+        min_idx = j
+        
+    # Swap the found minimum element with
+    # the first element		
+    A[i], A[min_idx] = A[min_idx], A[i]
+
+  # Driver code to test above
+  '''
+  print ("Sorted array")
+  for i in range(len(A)):
+    B = (A[i])
+  '''
+  
+  return A

@@ -1,13 +1,13 @@
 from linked_list import LinkedList,Node
-
+import __main__
 
 class Queue(LinkedList,Node):
-  
   def __repr__(self):
     node = self.head
     nodes = []
     while node is not None:
       nodes.append('<a href="'+node.data.split("|")[0]+'" target="_blank">'+node.data.split("|")[1]+node.data.split("|")[2]+'</a>')
+      __main__.sorteado.append(node.data)
       node = node.next
     nodes.append("")
     return "<br>".join(nodes)
