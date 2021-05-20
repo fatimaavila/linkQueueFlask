@@ -7,7 +7,7 @@ class Queue(LinkedList,Node):
     node = self.head
     nodes = []
     while node is not None:
-      nodes.append('<a href="'+node.data.split("|")[0]+'" target="_blank">'+node.data.split("|")[1]+'</a>')
+      nodes.append('<a href="'+node.data.split("|")[0]+'" target="_blank">'+node.data.split("|")[1]+node.data.split("|")[2]+'</a>')
       node = node.next
     nodes.append("")
     return "<br>".join(nodes)

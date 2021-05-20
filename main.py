@@ -29,7 +29,8 @@ def enqueque():
   print(request.args.get('nombre'))
   m_link=request.args.get('link')
   m_nombre=request.args.get('nombre')
-  lista2.enqueue(Node(m_link +'|'+m_nombre))
+  m_prioridad=request.args.get('prioridad')
+  lista2.enqueue(Node(m_link +'|'+m_nombre+'|'+m_prioridad))
   #print(lista2)
   return render_template('index.html',lista=lista2)
 
