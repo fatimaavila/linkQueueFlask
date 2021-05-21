@@ -11,11 +11,24 @@ web_site = Flask(__name__)
 lista2 = Queue()
 linksy = []
 sorteado = []
-html=''
 
+
+def gen_html():
+  print(lista2)
+  print(linksy)
+  sorteado = selSort(linksy)
+  #todo A_sorted=selSort(sorteado)
+  #todo format A_sorted
+  print(" Generar html del array")
+  html=''
+  for i in range(len(sorteado)):
+    html=html + '<a href="'+sorteado[i].split("|")[0]+'" target="_blank">'+sorteado[i].split("|")[1]+'</a><br>'
+  return html
+#--------------------------- main 
 @web_site.route('/')
 def index():
-	return render_template('index.html',lista=lista2,a_sorted=html )
+  html=gen_html()
+  return render_template('index.html',lista=lista2,a_sorted=html)
 
 @web_site.route('/user/', defaults={'username': None})
 @web_site.route('/user/<username>')
@@ -37,15 +50,7 @@ def enqueque():
   m_prioridad=request.args.get('prioridad')
   #linksy.clear()
   lista2.enqueue(Node(m_link +'|'+m_nombre+'|'+m_prioridad)) 
-  print(lista2)
-  print(linksy)
-  sorteado = selSort(linksy)
-  #todo A_sorted=selSort(sorteado)
-  #todo format A_sorted
-  print(" Generar html del array")
-  html=''
-  for i in range(len(sorteado)):
-    html=html + '<a href="'+sorteado[i].split("|")[0]+'" target="_blank">'+sorteado[i].split("|")[1]+sorteado[i].split("|")[2]+'</a><br>'
+  html = gen_html()
   return render_template('index.html',lista=lista2, a_sorted=html)
 
 @web_site.route('/dequeue')  
@@ -55,12 +60,18 @@ def dequeue():
 
 @web_site.route('/search')  
 def search():
-  print(lista2)
+  print("--------------------search")
+  html = gen_html()
   print(request.args.get("buscar"))
   consulta = request.args.get("buscar")
   resultado=linearSearch(linksy,consulta)
   print(resultado)
-  return render_template('index.html',lista=lista2)
+  if(resultado == -1):
+    resultado_text = "No ha ingresado este nombre :("
+  else:
+    resultado_text= ' <h4 style = "font-family:courier new,courier,monospace;"> ⬇️ Su resultado ⬇️ </h4> <a href="'+linksy[resultado].split("|")[0]+'" target="_blank">'+linksy[resultado].split("|")[1]+'</a>'
+
+  return render_template('index.html',lista=lista2,a_sorted=html,resultado_search=resultado_text)
 
 
 web_site.run(host='0.0.0.0', port=8080)

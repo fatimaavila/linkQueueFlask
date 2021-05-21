@@ -7,7 +7,7 @@ class Queue(LinkedList,Node):
     nodes = []
     __main__.linksy.clear()
     while node is not None:
-      nodes.append('<a href="'+node.data.split("|")[0]+'" target="_blank">'+node.data.split("|")[1]+node.data.split("|")[2]+'</a>')
+      nodes.append('<a href="'+node.data.split("|")[0]+'" target="_blank">'+node.data.split("|")[1]+'</a>')
       __main__.linksy.append(node.data)
       node = node.next
     nodes.append("")
