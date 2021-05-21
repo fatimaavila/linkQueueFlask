@@ -8,11 +8,13 @@ from sort import selSort
 web_site = Flask(__name__)
 
 lista2 = Queue()
+linksy = []
 sorteado = []
+html=''
 
 @web_site.route('/')
 def index():
-	return render_template('index.html',lista=lista2,A_sorted=sorteado )
+	return render_template('index.html',lista=lista2,a_sorted=html )
 
 @web_site.route('/user/', defaults={'username': None})
 @web_site.route('/user/<username>')
@@ -32,12 +34,17 @@ def enqueque():
   m_link=request.args.get('link')
   m_nombre=request.args.get('nombre')
   m_prioridad=request.args.get('prioridad')
+  #linksy.clear()
   lista2.enqueue(Node(m_link +'|'+m_nombre+'|'+m_prioridad))
-  A_sorted=selSort(sorteado)
+  sorteado = selSort(linksy) 
   #print(lista2)
   #todo A_sorted=selSort(sorteado)
   #todo format A_sorted
-  return render_template('index.html',lista=lista2, A_sorted=sorteado)
+  print(" Generar html del array")
+  html=''
+  for i in range(len(linksy)):
+    html=html + '<a href="'+linksy[i].split("|")[0]+'" target="_blank">'+linksy[i].split("|")[1]+linksy[i].split("|")[2]+'</a><br>'
+  return render_template('index.html',lista=lista2, a_sorted=html)
 
 @web_site.route('/dequeue')  
 def dequeue():

@@ -5,9 +5,10 @@ class Queue(LinkedList,Node):
   def __repr__(self):
     node = self.head
     nodes = []
+    __main__.linksy.clear()
     while node is not None:
       nodes.append('<a href="'+node.data.split("|")[0]+'" target="_blank">'+node.data.split("|")[1]+node.data.split("|")[2]+'</a>')
-      __main__.sorteado.append(node.data)
+      __main__.linksy.append(node.data)
       node = node.next
     nodes.append("")
     return "<br>".join(nodes)
