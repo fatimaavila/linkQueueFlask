@@ -16,7 +16,7 @@ Hay dos versiones, una en la terminal que se maneja con comandos y una en el nav
 
 ### Versión del sitio web
 
-<img src="https://i.imgur.com/kiItFM0.jpg" width="350" height="280"/>  
+<img src="https://i.imgur.com/oRfJm6h.jpg" width="500" height="280"/>  
 
 ## Casos de uso 🔨
 
