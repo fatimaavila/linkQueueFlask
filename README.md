@@ -28,9 +28,8 @@ Para los casos de uso se determinó que el usuario tendría las opciones de agre
 
 ### Videos y links de las pruebas y funcionamiento
 
-- https://youtu.be/7u1BtaG3yNE -> Video del funcionamiento versión terminal y versión web
-- https://youtu.be/Bp5UIFxsX4c -> Video pruebas JMeter
-- https://github.com/fatimaavila/linkQueueFlask -> GitHub de la versión en Flask
+- https://youtu.be/zTFZ2IZGZlU -> Video del funcionamiento versión terminal y versión web
+- https://youtu.be/bradqAuHfEQ -> Video pruebas JMeter
 
 ## Pruebas en JMETER
 
