@@ -9,7 +9,7 @@ Para la versión final, buscando que todo fuera lo más amigable para el usuario
 
 Para esto se aplicaron los conceptos aprendidos en clase como el LinearSearch y SelectionSort los cuales se implementaron para ordenar y buscar en la estructura de linkedList que para el proyecto se implemento como una QUEUE.
 
-Hay dos versiones, una en la terminal que se maneja con comandos y una en el navegador que se utiliza con un form. 
+Estas dos ultimas funcionalidades solo se implementaron en la version puesto que es donde realmnente funcionan los links. Aunque este proyecto se inicio con una en la terminal que se maneja con comandos que queda como referencia,  y la version actual que es la del navegador que se utiliza con un form. 
 
 ### Versión de la terminal
 
