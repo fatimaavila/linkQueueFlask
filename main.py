@@ -35,15 +35,15 @@ def enqueque():
   m_nombre=request.args.get('nombre')
   m_prioridad=request.args.get('prioridad')
   #linksy.clear()
-  lista2.enqueue(Node(m_link +'|'+m_nombre+'|'+m_prioridad))
-  sorteado = selSort(linksy) 
-  #print(lista2)
+  lista2.enqueue(Node(m_link +'|'+m_nombre+'|'+m_prioridad)) 
+  print(lista2)
+  sorteado = selSort(linksy)
   #todo A_sorted=selSort(sorteado)
   #todo format A_sorted
   print(" Generar html del array")
   html=''
-  for i in range(len(linksy)):
-    html=html + '<a href="'+linksy[i].split("|")[0]+'" target="_blank">'+linksy[i].split("|")[1]+linksy[i].split("|")[2]+'</a><br>'
+  for i in range(len(sorteado)):
+    html=html + '<a href="'+sorteado[i].split("|")[0]+'" target="_blank">'+sorteado[i].split("|")[1]+sorteado[i].split("|")[2]+'</a><br>'
   return render_template('index.html',lista=lista2, a_sorted=html)
 
 @web_site.route('/dequeue')  
