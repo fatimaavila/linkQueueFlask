@@ -7,6 +7,8 @@ Para el proyecto se realizó una adpatación del concepto para crear LinkQueue u
 utilizado para sus investigaciones y asignarles un nombre personalizado y así saber de que sitio se trata inmediatamente sin tener un link muy largo. 
 Para la versión final, buscando que todo fuera lo más amigable para el usuario, se implementó una búsqueda de links y un ordenamiento por importancia, del 1 al 3. Así que el usuario pueda encontrar todo de la manera más fácil.
 
+Para esto se aplicaron los conceptos aprendidos en clase como el LinearSearch y SelectionSort los cuales se implementaron para ordenar y buscar en la estructura de linkedList que para el proyecto se implemento como una QUEUE.
+
 Hay dos versiones, una en la terminal que se maneja con comandos y una en el navegador que se utiliza con un form. 
 
 ### Versión de la terminal
