@@ -3,6 +3,7 @@ from random import choice
 from linked_list import LinkedList, Node
 from queue import Queue
 from sort import selSort
+from search import linearSearch
 #from search import linearSearch
 
 web_site = Flask(__name__)
@@ -50,6 +51,15 @@ def enqueque():
 @web_site.route('/dequeue')  
 def dequeue():
   lista2.dequeue()
+  return render_template('index.html',lista=lista2)
+
+@web_site.route('/search')  
+def search():
+  print(lista2)
+  print(request.args.get("buscar"))
+  consulta = request.args.get("buscar")
+  resultado=linearSearch(linksy,consulta)
+  print(resultado)
   return render_template('index.html',lista=lista2)
 
 

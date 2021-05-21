@@ -6,7 +6,7 @@
     <style>
       form {
         margin: 0 auto;
-        max-width: 400px;
+        max-width: 600px;
         display: flex;
         flex-direction: column;
         justify-content: center;
@@ -21,7 +21,10 @@
   <h1 style="text-align: center; font-family:courier new,courier,monospace;"">✨LinkQueue✨</h1>
 	<body>
     <p style=" font-family:courier new,courier,monospace;"> Para hacer tus proyectos más sencillos, LinkQueue te ofrece una manera de guardar tus links con un nombre personalizado para nunca perder todos los sitios donde has investigado.</p>
-		<form action="/enqueue">
+    <table border="0" cellpadding="1" cellspacing="1" style="width:100%;">
+	<tbody>
+		<tr>
+			<td><form action="/enqueue">
 			<input type="text" placeholder="Link" name="link"></input>
       	<input type="text" placeholder="Nombre" name="nombre"></input>
        <p style=" font-family:courier new,courier,monospace;">Prioridad</p>
@@ -34,7 +37,11 @@
 		</form>
     <form action="/dequeue">
         <input type="submit" value="Borrar link (dequeue)"></input>
-      </form>
+      </form></td>
+			<td><center><h4>Buscar 🔍 </h4></center><form action="/search"><input name="buscar" type="text" /><input type="submit" value="🔍" /></form></td>
+		</tr>
+	</tbody>
+</table>
     <table align="center" border="0" cellpadding="1" cellspacing="1" style="width:80%;">
 	<thead>
 		<tr>
