@@ -37,6 +37,7 @@ def enqueque():
   #linksy.clear()
   lista2.enqueue(Node(m_link +'|'+m_nombre+'|'+m_prioridad)) 
   print(lista2)
+  print(linksy)
   sorteado = selSort(linksy)
   #todo A_sorted=selSort(sorteado)
   #todo format A_sorted
