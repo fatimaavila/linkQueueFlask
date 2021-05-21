@@ -34,7 +34,7 @@ Para los casos de uso se determinó que el usuario tendría las opciones de agre
 
 ## Pruebas en JMETER
 
-![image](https://user-images.githubusercontent.com/69205813/116155750-c3d1fc00-a6a7-11eb-8608-fc26c383c3d7.png)
+![image](https://user-images.githubusercontent.com/69205813/119160342-649ca880-ba15-11eb-8e54-b291ea3d60a5.png)
 25 usuarios 4 veces
 
 ![image](https://user-images.githubusercontent.com/69205813/116155928-0abff180-a6a8-11eb-92f5-ff715d7ff502.png)
